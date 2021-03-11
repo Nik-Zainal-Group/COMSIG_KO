@@ -150,7 +150,7 @@ MMRDetect.compute.Repindelcatalogue.similarity <- function(indel_cat, tissue_typ
   names(Sample_MMR) <- c("Sample","RepIndel_num")
   for(i in 2:5){
     for(j in 1:dim(Sample_MMR)[1]){
-      current_sample_indel <- indel_cat[,c("indelsubtype", "type",Sample_MMR[j,"Sample"])]
+      current_sample_indel <- indel_cat[,c("indelsubtype", "type",as.character(Sample_MMR[j,"Sample"]))]
       
       cossim <- Calculae_Cossim_catalogue_RepIndel(current_sample_indel,MMR_sig_indel[,c(1,i)])    
       cossim_allsample <- rbind(cossim_allsample,cossim)
