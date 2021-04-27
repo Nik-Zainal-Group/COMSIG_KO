@@ -1,0 +1,1 @@
+MMRDetect R package is available at: https://github.com/Nik-Zainal-Group/MMRDetect.git
